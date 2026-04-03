@@ -13,7 +13,24 @@
                         <Parameter />
                     </AuthPlugInInfo>
                 </AuthInfo>
-                <Properties />
+                <Properties>
+                    <ConfigurationProperty>
+                        <Name>MaxExtendedUpdatesPerRequest</Name>
+                        <Value>20</Value>
+                    </ConfigurationProperty>
+                    <ConfigurationProperty>
+                        <Name>ProtocolVersion</Name>
+                        <Value>3.2</Value>
+                    </ConfigurationProperty>
+                    <ConfigurationProperty>
+                        <Name>IsInventoryRequired</Name>
+                        <Value>0</Value>
+                    </ConfigurationProperty>
+                    <ConfigurationProperty>
+                        <Name>ClientReportingLevel</Name>
+                        <Value>2</Value>
+                    </ConfigurationProperty>
+                </Properties>
             </GetConfigResult>
         </GetConfigResponse>
     </s:Body>
