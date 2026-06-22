@@ -28,14 +28,14 @@ Using pipx (recommended):
 sudo apt install pipx python3-nftables
 pipx ensurepath
 pipx install wsuks --system-site-packages
-sudo ln -s ~/.local/bin/wsuks /usr/local/sbin/wsuks
+sudo ln -s ~/.local/bin/wsuks /usr/sbin/wsuks
 ```
 
 Using poetry:
 ```shell
 sudo apt install pipx git python3-nftables      # poetry should still be installed with pipx, but apt will work as well
 sudo pipx install poetry
-sudo ln -s /root/.local/bin/poetry /usr/local/sbin/poetry
+sudo ln -s /root/.local/bin/poetry /usr/sbin/poetry
 git clone https://github.com/NeffIsBack/wsuks
 cd wsuks
 sudo poetry install
