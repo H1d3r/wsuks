@@ -86,9 +86,8 @@ class SysvolParser:
                 self.logger.success(f"Found vulnerable WSUS Server using HTTP: {scheme}://{host}:{wsusPort}")
                 return host, wsusPort
             elif scheme == "https":
-                self.logger.critical(f"Found WSUS Server using HTTPS: {scheme}://{host}:{wsusPort}")
-                self.logger.critical("Not vulnerable to WSUS Attack. Exiting...")
-                sys.exit(1)
+                self.logger.success(f"Found WSUS Server using HTTPS: {scheme}://{host}:{wsusPort}")
+                self.logger.error("Not vulnerable to classic WSUS Attack. Valid TLS certificate required.")
         elif len(possible_wsus_locations) > 1:
             self.logger.warning("Found multiple WSUS Policies, please specify the WSUS Server manually with --WSUS-Server and --WSUS-Port.")
             for policy in possible_wsus_locations:
